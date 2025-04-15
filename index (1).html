@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ※‖ ABDULLHA ‖※</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <link rel="icon" href="https://raw.githubusercontent.com/rubish000/imagexx/refs/heads/main/rubish-logo.png"
+    type="image/png">
+
+  <meta charset="UTF-8">
+  <meta name="description" content="FUCK YOU">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="ABDULLHA">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      overflow-x: hidden;
+      background: #1e1e2f;
+
+    }
+
+    body.light-mode {
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    body.light-mode header,
+    body.light-mode .sidebar,
+    body.light-mode .section,
+    body.light-mode footer {
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+    }
+
+    body.light-mode .sidebar ul li a,
+    body.light-mode .profile p,
+    body.light-mode .skill p,
+    body.light-mode .project p,
+    body.light-mode footer p {
+      color: #333;
+    }
+
+    body.light-mode .skill,
+    body.light-mode .project {
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+    }
+
+    body.light-mode .contact-form input,
+    body.light-mode .contact-form textarea {
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(30, 30, 47, 0.9);
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1001;
+      display: none;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: rgba(30, 30, 47, 0.9);
+      backdrop-filter: blur(10px);
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 80px;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      display: block;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #00bcd4;
+    }
+
+    .profile {
+      text-align: center;
+      padding: 150px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid #00bcd4;
+      margin-bottom: px;
+      margin-top: 1px;
+      box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+    }
+
+    .profile h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .profile p {
+      font-size: 1.2rem;
+      color: #ccc;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .section {
+      padding: 80px 20px;
+      background: rgba(30, 30, 47, 0.8);
+      margin: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00bcd4;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .skill {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3);
+    }
+
+    .skill i {
+      font-size: 2rem;
+      color: #00bcd4;
+    }
+
+    .skill h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .skill p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+
+    .skill h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .skill-bar {
+      width: 100%;
+      background: #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 20px;
+      position: relative;
+    }
+
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+
+
+    .skill i {
+      font-size: 30px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .skill h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .skill-bar {
+      width: 100%;
+      background: #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 20px;
+      position: relative;
+    }
+
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      color: white;
+      text-align: center;
+      line-height: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      width: 0;
+      animation: fillProgress 2s ease-in-out forwards;
+    }
+
+    @keyframes fillProgress {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: var(--width);
+      }
+    }
+
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3);
+    }
+
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .project p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .project-links {
+      margin-top: 10px;
+    }
+
+    .project-links a {
+      margin-right: 10px;
+      color: #00bcd4;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .project-links a:hover {
+      color: #fff;
+    }
+
+    .api-docs-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #00bcd4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: background 0.3s, transform 0.3s;
+      margin-top: 20px;
+    }
+
+    .api-docs-button:hover {
+      background: #0097a7;
+      transform: translateY(-3px);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      padding: 10px;
+      background: #00bcd4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #0097a7;
+    }
+
+    footer {
+      background: rgba(30, 30, 47, 0.9);
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+      backdrop-filter: blur(10px);
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      color: #00bcd4;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+    }
+
+    .mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .profile img {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .sidebar {
+        left: -250px;
+      }
+
+      .sidebar.active {
+        left: 0;
+      }
+
+      .profile h1 {
+        font-size: 2rem;
+      }
+
+      .profile p {
+        font-size: 1rem;
+      }
+
+      .section {
+        padding: 60px 15px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+    }
+
+    .api-docs-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      transition: all 0.4s ease;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .api-docs-button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.4s ease;
+      z-index: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    .api-docs-button:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .api-docs-button:hover {
+      background: linear-gradient(135deg, #0097a7, #00bcd4);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 188, 212, 0.5);
+    }
+
+    .api-docs-button span {
+      position: relative;
+      z-index: 1;
+    }
+
+
+    .about-container {
+      background: rgba(30, 30, 47, 0.8);
+      color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      width: 80%;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-title {
+      color: #00bcd4;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .about-text {
+      color: #ccc;
+      line-height: 1.6;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .bold-italic {
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .expertise {
+      color: #00bcd4;
+      font-size: 1.3em;
+      margin-top: 20px;
+    }
+
+    .expertise-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .list-item {
+      color: #ccc;
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .check {
+      color: #28a745;
+      margin-right: 10px;
+    }
+
+    #current-time {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00bcd4;
+      background: rgba(0, 188, 212, 0.1);
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 10px;
+
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+    }
+
+    #visitor-ip {
+      background: rgba(30, 30, 47, 0.9);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    #visitor-ip h2 {
+      font-size: 2rem;
+      color: #00bcd4;
+      margin-bottom: 20px;
+    }
+
+    #visitor-ip p {
+      font-size: 1rem;
+      color: #ccc;
+      margin: 10px 0;
+    }
+
+    #visitor-ip span {
+      font-weight: bold;
+      color: #00bcd4;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <div class="menu-btn">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="mode-toggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#api-docs">API Docs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+
+  <section id="home" class="profile">
+    <img
+      src="https://graph.facebook.com/100073291639820/picture?width=1024&height=1024&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662"
+      alt="Profile Image">
+    <h1>ABDULLHA</h1>
+    <p>Your vision, my creation</p>
+    <div class="social-links">
+<a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://wa.me/88014*****" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://t.me/" target="_blank"><i class="fab fa-telegram"></i></a>
+<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+      <h2><span id="current-time">Loading...</span></h2>
+    </div>
+  </section>
+
+  <div class="about-container"
+    style="background: rgba(30, 30, 47, 0.8); color: #fff; border-radius: 10px; padding: 30px; width: 80%; margin: 0 auto; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+    <h2 class="about-title" style="color: #00bcd4;">About Me</h2>
+    <p class="about-text" style="color: #ccc;">Hello! I'm <span class="highlight" style="color: #00bcd4;">ABDULLHA</span>, a passionate <span class="bold">programmer</span> skilled in <span class="italic">web
+        development</span>, <span class="bold">cybersecurity</span>, <span class="italic">networking</span>, <span
+        class="bold">graphics design</span>, and <span class="italic">digital marketing</span>. With years of
+      experience, I focus on creating <span class="bold-italic">innovative solutions</span> and <span
+        class="bold-italic">secure applications</span>.</p>
+    <p class="about-text" style="color: #ccc;">I'm always exploring new tech and love turning ideas into reality. Let's
+      connect and make something great! 🚀</p>
+    <p class="expertise" style="color: #00bcd4; font-size: 20px;">Expertise:</p>
+    <ul class="expertise-list">
+      <li class="list-item" style="color: #ccc;"><span class="check" style="color: #28a745;">✔</span> Web Development
+      </li>
+      <li class="list-item" style="color: #ccc;"><span class="check" style="color: #28a745;">✔</span> Cybersecurity</li>
+      <li class="list-item" style="color: #ccc;"><span class="check" style="color: #28a745;">✔</span> Digital Marketing
+      </li>
+      <li class="list-item" style="color: #ccc;"><span class="check" style="color: #28a745;">✔</span> Graphics Design
+      </li>
+    </ul>
+  </div>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="90%">90%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Graphics Design</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="80%">80%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <i class="fas fa-network-wired"></i>
+        <h3>Networking</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="75%">75%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Cybersecurity</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="85%">85%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Digital Marketing</h3>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="70%">70%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <img src="https://raw.githubusercontent.com/rubish000/imagexx/refs/heads/main/Facebook.jpg"
+          alt="Facebook Messenger Bot">
+        <div class="project-content">
+          <h3>Facebook Messenger Bot</h3>
+          <p>A smart and interactive chatbot for Facebook Messenger designed to automate customer support, provide
+            instant responses, and enhance user engagement.</p>
+          <div class="project-links">
+            <a href="https://m.me/" target="_blank">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://raw.githubusercontent.com/rubish000/imagexx/refs/heads/main/telegram.jpg" alt="Telegram Bot">
+        <div class="project-content">
+          <h3>Telegram Bot</h3>
+          <p>A versatile Telegram bot built to automate tasks, provide real-time updates, and interact with users
+            through commands and inline queries.</p>
+          <div class="project-links">
+            <a href="https://t.me/" target="_blank">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="api-docs" class="section">
+    <h2>MIX BOMBING</h2>
+    <a href="YOUR 🧡❤❤❤LINK" target="_blank" class="api-docs-button">A powerfull SMS & CALL BOMBER</a>
+  </section>
+
+  <section id="api-docs" class="section">
+    <h2>API Documentation</h2>
+    <a href="YOUR💞💞💕💞💞💞💞💞💕 LINK" target="_blank" class="api-docs-button">View Full API Docs</a>
+  </section>
+
+  <section id="visitor-ip" class="section">
+    <h2>Visitor Information</h2>
+    <p>Your IP Address: <span id="ip-address">Loading...</span></p>
+    <p>Your Region: <span id="visitor-region">Loading...</span></p>
+    <p>Battery Level: <span id="battery-level">Loading...</span></p>
+    <p>Charging Status: <span id="charging-status">Loading...</span></p>
+    <p>Device Type: <span id="device-type">Loading...</span></p>
+    <p>Operating System: <span id="os">Loading...</span></p>
+    <p>Browser: <span id="browser">Loading...</span></p>
+    <p>Browser Version: <span id="browser-version">Loading...</span></p>
+    <p>Platform: <span id="platform">Loading...</span></p>
+    <p>Touch Support: <span id="touch-support">Loading...</span></p>
+    <p>Online Status: <span id="online-status">Loading...</span></p>
+    <p>Cookies Enabled: <span id="cookies-enabled">Loading...</span></p>
+    <p>Do Not Track: <span id="do-not-track">Loading...</span></p>
+    <p>Geolocation: <span id="geolocation">Loading...</span></p>
+    <p>Connection Type: <span id="connection-type">Loading...</span></p>
+    <p>Screen Resolution: <span id="screen-resolution">Loading...</span></p>
+    <p>CPU Cores: <span id="cpu-cores">Loading...</span></p>
+    <p>Device Memory (RAM): <span id="device-memory">Loading...</span></p>
+    <p>Language: <span id="language">Loading...</span></p>
+    <p>Timezone: <span id="timezone">Loading...</span></p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contact-form" class="contact-form" action="https://formspree.io/" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 abdullha. All Rights Reserved.</p>
+    <div class="social-links">
+<a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://wa.me/88017******" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://t.me/" target="_blank"><i class="fab fa-telegram"></i></a>
+<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <audio id="background-music" autoplay loop>
+    <source src="https://github.com/rubish000/imagexx/raw/refs/heads/main/song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const audio = document.getElementById('background-music');
+
+      // Set the volume to 50% (0.5)
+      audio.volume = 0.1; 
+
+      const playAudio = () => {
+        audio.play().catch(error => {
+          console.log("Autoplay was prevented. Please interact with the page to play the audio.");
+        });
+      };
+
+      playAudio();
+
+      document.addEventListener('click', playAudio);
+      document.addEventListener('keydown', playAudio);
+      document.addEventListener('scroll', playAudio);
+    });
+
+    const menuBtn = document.querySelector('.menu-btn');
+    const sidebar = document.querySelector('.sidebar');
+    const modeToggle = document.querySelector('.mode-toggle');
+    const body = document.body;
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+
+    modeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      const icon = modeToggle.querySelector('i');
+      if (body.classList.contains('light-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#00bcd4"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00bcd4",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch('https://ipinfo.io/json?token=0b68842a329c44') 
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('ip-address').textContent = data.ip;
+
+          const region = `${data.city}, ${data.region}, ${data.country}`;
+          document.getElementById('visitor-region').textContent = region;
+
+          const timezone = data.timezone || Intl.DateTimeFormat().resolvedOptions().timeZone;
+          document.getElementById('timezone').textContent = timezone;
+
+          const updateTime = () => {
+            const now = new Date();
+            const formattedTime = new Intl.DateTimeFormat('en-US', {
+              hour: 'numeric',
+              minute: 'numeric',
+              second: 'numeric',
+              timeZone: timezone,
+            }).format(now);
+            document.getElementById('current-time').textContent = formattedTime;
+          };
+
+          updateTime();
+          setInterval(updateTime, 1000);
+        })
+        .catch(error => {
+          console.error('Error fetching visitor information:', error);
+          document.getElementById('ip-address').textContent = 'Unable to fetch IP address';
+          document.getElementById('visitor-region').textContent = 'Unable to fetch region';
+          document.getElementById('timezone').textContent = 'Unable to fetch timezone';
+        });
+
+      if ('getBattery' in navigator) {
+        navigator.getBattery().then(battery => {
+          const batteryLevel = Math.round(battery.level * 100) + '%';
+          document.getElementById('battery-level').textContent = batteryLevel;
+
+          const chargingStatus = battery.charging ? 'Charging' : 'Not Charging';
+          document.getElementById('charging-status').textContent = chargingStatus;
+
+          battery.addEventListener('levelchange', () => {
+            document.getElementById('battery-level').textContent = Math.round(battery.level * 100) + '%';
+          });
+
+          battery.addEventListener('chargingchange', () => {
+            document.getElementById('charging-status').textContent = battery.charging ? 'Charging' : 'Not Charging';
+          });
+        });
+      } else {
+        document.getElementById('battery-level').textContent = 'Not Supported';
+        document.getElementById('charging-status').textContent = 'Not Supported';
+      }
+
+      const userAgent = navigator.userAgent;
+
+      let deviceType = 'Desktop';
+      if (/Mobi|Android/i.test(userAgent)) {
+        deviceType = 'Mobile';
+      } else if (/Tablet|iPad/i.test(userAgent)) {
+        deviceType = 'Tablet';
+      }
+      document.getElementById('device-type').textContent = deviceType;
+
+      let os = 'Unknown OS';
+      if (/Windows/i.test(userAgent)) {
+        os = 'Windows';
+      } else if (/Mac/i.test(userAgent)) {
+        os = 'Mac';
+      } else if (/Linux/i.test(userAgent)) {
+        os = 'Linux';
+      } else if (/Android/i.test(userAgent)) {
+        os = 'Android';
+      } else if (/iOS|iPhone|iPad|iPod/i.test(userAgent)) {
+        os = 'iOS';
+      }
+      document.getElementById('os').textContent = os;
+
+      let browser = 'Unknown Browser';
+      if (/Firefox/i.test(userAgent)) {
+        browser = 'Firefox';
+      } else if (/Chrome/i.test(userAgent) && !/Edg/i.test(userAgent)) {
+        browser = 'Chrome';
+      } else if (/Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) {
+        browser = 'Safari';
+      } else if (/Edg/i.test(userAgent)) {
+        browser = 'Edge';
+      } else if (/Opera|OPR/i.test(userAgent)) {
+        browser = 'Opera';
+      }
+      document.getElementById('browser').textContent = browser;
+
+      const browserVersion = userAgent.match(/(Chrome|Firefox|Safari|Edge|Opera|OPR)\/(\d+\.\d+)/);
+      document.getElementById('browser-version').textContent = browserVersion ? browserVersion[2] : 'Unknown';
+
+      document.getElementById('platform').textContent = navigator.platform;
+
+      const touchSupport = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      document.getElementById('touch-support').textContent = touchSupport ? 'Yes' : 'No';
+
+      document.getElementById('online-status').textContent = navigator.onLine ? 'Online' : 'Offline';
+
+      document.getElementById('cookies-enabled').textContent = navigator.cookieEnabled ? 'Yes' : 'No';
+
+      document.getElementById('do-not-track').textContent = navigator.doNotTrack || 'Unknown';
+
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const {latitude, longitude} = position.coords;
+            document.getElementById('geolocation').textContent = `${latitude}, ${longitude}`;
+          },
+          (error) => {
+            document.getElementById('geolocation').textContent = 'Permission denied or unavailable';
+          }
+        );
+      } else {
+        document.getElementById('geolocation').textContent = 'Not Supported';
+      }
+
+      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      if (connection) {
+        document.getElementById('connection-type').textContent = connection.effectiveType || 'Unknown';
+      } else {
+        document.getElementById('connection-type').textContent = 'Not Supported';
+      }
+
+      const screenResolution = `${window.screen.width} x ${window.screen.height}`;
+      document.getElementById('screen-resolution').textContent = screenResolution;
+
+      const cpuCores = navigator.hardwareConcurrency || 'Unknown';
+      document.getElementById('cpu-cores').textContent = cpuCores;
+
+      const deviceMemory = navigator.deviceMemory ? `${navigator.deviceMemory} GB` : 'Unknown';
+      document.getElementById('device-memory').textContent = deviceMemory;
+
+      const language = navigator.language || 'Unknown';
+      document.getElementById('language').textContent = language;
+    });
+
+  </script>
+</body>
+
+</html>
